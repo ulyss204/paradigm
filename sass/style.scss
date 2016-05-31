@@ -1,0 +1,221 @@
+@import "_normalize";
+@import "_base";
+body{
+	min-width: 320px;
+	margin: 0 auto;
+	display: flex;
+   justify-content: center;
+   align-items: center;
+   font-family: Arial,sans-serif;
+}
+.container{
+	width: 590px;
+   border-radius: 4px;
+   border: 5px solid #799dc9;
+}
+header{
+	position: relative;
+	.logo{
+		@include param(165px,60px);
+		@include size;
+		margin: 0 auto;
+		padding-top: 20px;
+		background-image: url(../images/logo.png);
+	}
+	.up_candy{
+		
+		@include param(61px,91px);
+		background-image: url(../images/candyup.svg);
+		position: absolute;
+		top: -1px;
+		right: 20px;
+	}
+}
+.boy{
+	@include param(100%,240px);
+	@include size;
+	background-image: url(../images/background.jpg);
+	.boy_clear{
+		&:after{
+			content: ".";
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		.boy_container{
+			float: left;
+			margin-left: 35px;
+			.boy_txt{
+				@include fonts(23px,400,#0e4194);
+				font-family: 'Fontocide',sans-serif;
+				margin-top: 50px;
+				margin-bottom: 0;
+			}
+			.boy_text{
+				@include fonts(11px,700,#0e4194);
+				font-family: 'Helios',sans-serif;
+				border-bottom: 1px solid #a9c4df; 
+
+			}
+		}
+		.boy_container2{
+			float: right;
+			position: relative;
+			margin-top: 25px;
+    		margin-right: 50px;
+			.boy_cloud{
+				@include param(104px,79px);
+				background-image: url(../images/cloud.svg);
+			}
+			.boy_film{
+				top: 69px;
+				position: absolute;
+				text-align: center;
+				left: -5px;
+				.film_img{
+					@include param(45px,37px);
+					background-image: url(../images/film.svg);
+				}
+			}
+			.boy_photo{
+				float: right;
+				text-align: center;
+				margin-left: 68px;
+				.photo_img{
+					@include param(37px,27px);
+					background-image: url(../images/photo.svg);
+				}
+			}
+			.film_text{
+				font-family: 'Helios',sans-serif;
+				@include fonts(9px,700,#0e4194);
+			}
+		}
+
+	}
+	.boy_date{
+		margin: 0 20px;
+		@include fonts(9px,400,#0e4194);
+		text-align: end;
+		font-family: 'Helios',sans-serif;
+		
+		span{
+			font-weight: 300;
+		}
+	}
+	#marg{
+		margin-top: 30px;
+	}
+}
+.mid{
+	text-align: center;
+	position: relative;
+	.mid_photo{
+		@include param(37px,27px);
+		background-image: url(../images/photo.svg);
+		margin: 40px auto;
+		position: relative;
+		&:before,&:after{
+			content: "";
+			  position: absolute;
+			  
+			  
+			  border-top: 2px solid #0e4194;
+			  top: 12px;
+			  width: 180px;
+		}
+		&:before{
+			right: 100%;
+  			margin-right: 8px;
+		}
+		&:after{
+			left: 100%;
+			margin-left: 8px;
+		}
+	}
+	.mid_text{
+		@include fonts(18px,300,#000);
+		font-family: sans-serif;
+		
+	}
+	h2{
+		@include fonts(24px,400,#0e4194);
+		font-family: 'Fontocide',sans-serif;
+		margin-bottom:  25px;
+	}
+	hr{
+		@include param(405px,2px);
+		background-color: #0e4194;
+		border: none;
+	}
+	h3{
+		@include fonts(20px,500,#000);
+		margin-bottom: 25px;
+		
+	}
+	h4,.mid_article{
+		@include fonts(15px,500,#000);
+		width: 435px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		
+	}
+	.mid_article{
+		padding-bottom: 95px;
+		margin-bottom: 0;
+		a{
+			color: #82b3fb;
+		}
+	}
+	.down_candy{
+		position: absolute;
+		bottom: 0;
+		left: 10px;
+		@include param(78px,123px);
+		background-image: url(../images/candydown.svg);
+	}
+}
+footer{
+	background-color: #799dc9;
+	text-align: center;
+	height: 140px;
+	.foot{
+		@include fonts(10px,500,#fff);
+		margin: 0;
+		padding: 28px 0 5px 0;
+	}
+	ul{
+		padding: 0;
+		margin: 15px auto;
+
+		.social{
+			@include param(38px,38px);
+			background-image: url(../images/facebook_1.svg);
+			display: inline-block;
+			margin-right: 10px;
+			&:nth-child(2){
+				background-image: url(../images/vk.svg);
+			}
+			&:nth-child(3){
+				background-image: url(../images/twitter.svg);
+			}
+			&:nth-child(4){
+				background-image: url(../images/youtube.svg);
+			}
+			&:nth-child(5){
+				background-image: url(../images/google.svg);
+				margin-right: 0;
+			}
+			.display{
+				height: 100%;
+				display: block;
+			}
+		}
+	}
+	.www{
+		@include fonts(16px,500,#fff);
+		text-decoration: none;
+		
+	}
+}

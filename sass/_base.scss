@@ -1,0 +1,45 @@
+@mixin param($width,$height){
+	width: $width;
+	height: $height;
+	
+}
+@mixin size{
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+@mixin fonts($size,$weight,$color){
+	font-size: $size;
+	font-weight: $weight;
+	color: $color;
+}
+@font-face {
+	font-family: 'Fontocide'; 
+	src: local("Fontocide"), 
+	url(fonts/Fontocide.ttf); 
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Helios'; 
+	src: local("Helios Bold Italic"), 
+	url(fonts/helios-bold-italic.ttf); 
+	font-weight: 700;
+}
+@font-face {
+	font-family: 'Helios'; 
+	src: local("Heliosc"), 
+	url(fonts/Heliosc.otf); 
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'Helios'; 
+	src: local("helioscondlightc"), 
+	url(fonts/helioscondlightc.otf); 
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Luga'; 
+	src: local("Luga Extra Ad"), 
+	url(fonts/LugaExtraAd-ExtraLight.ttf); 
+	font-weight: 300;
+}
