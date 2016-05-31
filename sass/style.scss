@@ -13,7 +13,7 @@ body{
    border-radius: 4px;
    border: 5px solid #799dc9;
 }
-header{
+.header{
 	position: relative;
 	.logo{
 		@include param(165px,60px);
@@ -104,7 +104,7 @@ header{
 			font-weight: 300;
 		}
 	}
-	#marg{
+	.marg{
 		margin-top: 30px;
 	}
 }
@@ -176,7 +176,7 @@ header{
 		background-image: url(../images/candydown.svg);
 	}
 }
-footer{
+.footer{
 	background-color: #799dc9;
 	text-align: center;
 	height: 140px;
